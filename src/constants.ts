@@ -3,3 +3,5 @@ export const CALORIES_PER_GRAM = {
   FAT: 9,
   CARBOHYDRATE: 4
 } as const;
+
+export const MAX_GRAMS = 100000; // 100kg

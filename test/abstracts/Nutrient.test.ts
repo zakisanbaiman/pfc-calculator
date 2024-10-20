@@ -12,6 +12,22 @@ class TestNutrient extends Nutrient {
 }
 
 describe('validate', () => {
+  test('入力値が数値でない場合、エラーがスローされること', () => {
+    const errMsg = 'Invalid input: grams must be a number';
+
+    // undefinedを入力した場合
+    const grams = undefined;
+    expect(() => new TestNutrient(grams as any)).toThrowError(errMsg);
+
+    // nullを入力した場合
+    const grams2 = null;
+    expect(() => new TestNutrient(grams2 as any)).toThrowError(errMsg);
+    
+    // 数値以外を入力した場合
+    const grams3 = 'a';
+    expect(() => new TestNutrient(grams as any)).toThrowError(errMsg);
+  });
+
   test('最小値: 入力値が0未満の場合、エラーがスローされること', () => {
     // 0未満の値を入力した場合
     const grams = -1;

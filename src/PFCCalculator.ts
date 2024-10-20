@@ -8,7 +8,17 @@ export class PFCCalculator {
     private protein: Protein,
     private fat: Fat,
     private carbohydrate: Carbohydrate
-  ) {}
+  ) {
+    this.validate();
+  }
+
+  private validate(): void {
+    Object.values(this).forEach((nutrient) => {
+      if (nutrient === null || nutrient === undefined) {
+        throw new Error('Invalid input: nutrient must not be null or undefined');
+      }
+    });
+  }
 
   calculateTotalCalories(): number {
     return this.protein.getCalories() + this.fat.getCalories() + this.carbohydrate.getCalories();

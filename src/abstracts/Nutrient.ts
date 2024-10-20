@@ -13,6 +13,10 @@ export abstract class Nutrient {
    * 入力値が0未満の場合、エラーをスローする
    */
   protected validate(grams: number): void {
+    if (grams === undefined || grams === null || isNaN(grams)) {
+      throw new Error('Invalid input: grams must be a number');
+    }
+
     if (grams < 0) {
       throw new Error('Invalid input: grams must be greater than or equal to 0');
     }

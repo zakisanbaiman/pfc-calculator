@@ -1,0 +1,17 @@
+{
+    "name": "calc-pfc-balance",
+    "version": "1.0.0",
+    "description": "PFC Balance Calculator in TypeScript",
+    "scripts": {
+        "start": "ts-node src/scripts/calcNattoRiceCalories.ts",
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.3",
+        "@types/node": "^16.11.12",
+        "jest": "^27.4.5",
+        "ts-jest": "^27.1.2",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.4"
+    }
+}

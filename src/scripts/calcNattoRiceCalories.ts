@@ -10,9 +10,9 @@ function main (): void {
   const totalCalories1 = calculator1.calculateTotalCalories()
 
   // 納豆
-  const protein2 = new Protein(18.6)
-  const fat2 = new Fat(9.8)
-  const carbohydrate2 = new Carbohydrate(6.0)
+  const protein2 = new Protein(16.5)
+  const fat2 = new Fat(10.0)
+  const carbohydrate2 = new Carbohydrate(12.1)
   const calculator2 = new PFCCalculator(protein2, fat2, carbohydrate2)
   const totalCalories2 = calculator2.calculateTotalCalories()
   
